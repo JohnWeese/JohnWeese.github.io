@@ -26,7 +26,7 @@
 
 	<script>
 		(function(){
-			'use strict'
+			'use strict';
 			/* global jQuery */
 
 			//////////////////////////////////////////////////////////////////
@@ -35,7 +35,7 @@
 			
 			var box = jQuery('.box');	// reference to the HTML .box element
 			var board = jQuery('.board');	// reference to the HTML .board element
-			var boardWidth = board.width();	// the maximum X-Coordinate of the screen
+			var boardWidth = 200;	// the maximum X-Coordinate of the screen
 
 			// Every 50 milliseconds, call the update Function (see below)
 			setInterval(update, 50);
@@ -59,7 +59,9 @@
 			
 			// TODO 2 - Variable declarations 
 			
-
+				var positionX = 0;
+				var points = 0;
+				var speed = 10;
 			
 			/* 
 			This Function will be called 20 times/second. Each time it is called,
@@ -67,9 +69,18 @@
 			turn it around! 
 			*/
 			function update() {
+				positionX = positionX + speed;
+				moveBoxTo(positionX);
 				
+					if (positionX >= boardWidth) {
+				 speed *= -1;
+			}
+				if (positionX <= 0) {
+				 speed *= 1;
+			}
+		
 
-			};
+			}
 
 			/* 
 			This Function will be called each time the box is clicked. Each time it is called,
@@ -77,11 +88,20 @@
 			the left side of the screen.
 			*/
 			function handleBoxClick() {
+				positionX = 0;
+				points = points + 1;
+				speed = speed + 3;
+				changeBoxText(points);
 				
-
-
-			};
+				if (speed >- 0) {
+				speed = speed + 3;
+				}
+				if (speed <= 0)
+				speed = speed - 3;
+				}
+			
 		})();
 	</script>
 </body>
 </html>
+.*
