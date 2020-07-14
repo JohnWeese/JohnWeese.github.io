@@ -14,7 +14,7 @@
 			display: block;
 			position: absolute;
 			top: 100px;
-			left: 0px;  /* <--- Change me! */
+			left: 2px;  /* <--- Change me! */
 		}
 	</style>
 	<!-- 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
@@ -35,7 +35,7 @@
 			
 			var box = jQuery('.box');	// reference to the HTML .box element
 			var board = jQuery('.board');	// reference to the HTML .board element
-			var boardWidth = 200;	// the maximum X-Coordinate of the screen
+			var boardWidth = 740;	// the maximum X-Coordinate of the screen
 
 			// Every 50 milliseconds, call the update Function (see below)
 			setInterval(update, 50);
@@ -72,11 +72,11 @@
 				positionX = positionX + speed;
 				moveBoxTo(positionX);
 				
-					if (positionX >= boardWidth) {
+			if (positionX > boardWidth) {
 				 speed *= -1;
 			}
-				if (positionX <= 0) {
-				 speed *= 1;
+				if (positionX < 0) {
+				 speed *= -1;
 			}
 		
 
@@ -93,10 +93,10 @@
 				speed = speed + 3;
 				changeBoxText(points);
 				
-				if (speed >- 0) {
+				if (speed > 0) {
 				speed = speed + 3;
 				}
-				if (speed <= 0)
+				if (speed < 0)
 				speed = speed - 3;
 				}
 			
@@ -104,4 +104,3 @@
 	</script>
 </body>
 </html>
-.*
