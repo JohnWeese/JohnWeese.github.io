@@ -2,60 +2,88 @@
 <html>
     <head>
     <title>Sheba's Amazing Website</title>
-    <style type="text/css">
-            body {
-                background: rgb(125, 198, 205);
-                color: rgb(45, 45, 45);
+    <style>
+    body {
+        background: rgb(125, 198, 205);
+        color: rgb(45, 45, 45);
+        padding: 10px;
+        font-family: arial;
+    }
+    header {
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+    #all-contents {
+        max-width: 800px;
+        margin: auto;
+    }
+
+    /* navigation menu */
+    nav {
+        background: rgb(156, 45, 11);
+        margin-bottom: 20px;
+        display: flex;
+        padding: 10px;
+    }
+    nav header {
+        display: flex;
+        align-items: center;
+        color: rgb(255, 255, 255);
+        flex: 1;
+    }
+    nav ul {
+        list-style-image: none;
+    }
+    nav li {
+        display: inline-block;
+        padding: 0 10px;
+    }
+    nav a {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    /* main container area beneath menu */
+    main {
+        background: rgb(245, 238, 219);
+        display: flex;
+    }
+    .sidebar {
+        margin-right: 25px;
+        padding: 10px;
+    }
+    .sidebar img {
+        width: 200px;
+    }
+    .content {
+        flex: 1;
+        padding: 15px;
+    }
+    .interests header {
+        font-size: 1.25em;
+    }
+     /* portfolio styles */
+            #portfolio {
+                list-style-type: none;
+                padding-left: 0;
+            }
+            
+            #portfolio li {
+                background: #fff;
                 padding: 10px;
-                font-family: arial;
+                border-radius: 10px;
+                margin-bottom: 10px;
             }
-            header {
-                font-size: 1.5em;
-                font-weight: bold;
-            }
-            h1 {
-                margin: 10px;
-            }
-            #all-contents {
-                max-width: 800px;
-                margin: auto;
-            }
-    
-            /* navigation menu */
-            nav {
-                background: rgb(239, 80, 41);
-                margin: 0 auto;
-                display: flex;
-                padding: 10px;
-            }
-            nav header {
-                display: flex;
-                align-items: center;
-                color: rgb(255, 255, 255);
-                flex: 1;
-            }
-            nav ul {
-                list-style-image: none;
-            }
-            nav li {
-                display: inline-block;
-                padding: 0 10px;
-            }
-            nav a {
+            
+            #portfolio li:hover {
+                background: #eee;
+            } 
+            
+            #portfolio a {
                 text-decoration: none;
-                color: #fff;
+                color: #454545;
             }
-    
-            /* main container area beneath menu */
-            main {
-                background: rgb(245, 238, 219);
-                display: flex;
-            }
-            .content {
-                flex: 1;
-                padding: 15px;
-            }
-        </style>
+</style>
     </head>
 
     <body>
